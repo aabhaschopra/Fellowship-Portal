@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+<script>
+    var firebaseConfig = {
+    "apiKey": "AIzaSyCgMO6h3zdhTvnbdgTBok3nnxlFIxtWzFY",
+    "authDomain": "cfg-team-56.firebaseapp.com",
+    "databaseURL": "https://cfg-team-56-default-rtdb.firebaseio.com",
+    "projectId": "cfg-team-56",
+    "storageBucket": "cfg-team-56.appspot.com",
+    "messagingSenderId": "366000995858",
+    "appId": "1:366000995858:web:c34778b5f72cf2a38ce2cb",
+    "measurementId": "G-W5F7EDPKPK"
+  };
+  firebase.initializeApp(firebaseConfig);
+  function uploadimage(){
+  var storage = firebase.storage();
+  var file=document.getElementById("files").files[0];
+  var storageref=storage.ref();
+  var thisref=storageref.child("ProgramManager").child(file.name).put(file);
+  thisref.on('state_changed',function(snapshot) {
+  console.log('Done');
+ 
+  }, function(error) {
+  console.log('Error',error);
+ 
+}, function() {
+  // Uploaded completed successfully, now we can get the download URL
+  thisref.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    console.log('File available at', downloadURL);
+    document.getElementById("url").value=downloadURL;
+    alert('uploaded successfully');
+  });
+});
+}
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="{% static 'cfg/mentordetailsstyle.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="about-section">
+        <h1>Assignments</h1>
+        <p>Catch up on your pending Assignments and check your grades on the submitted ones!!</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <h2 style="text-align: center; padding: 15px;">Assignments TODO</h2>
+                    <img src="{% static 'cfg/images/todo.jpg' %}" width="175px" height="175px">
+                    <div class="container">
+                        <p>Some text that describes the assignment.</p>
+                        <p><button class="button" onclick="">Add Assignment for students</button></p>         
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <h2 style="text-align: center; padding: 15px;">Assignments Completed</h2>
+                    <img src="{% static 'cfg/images/completed.jpg' %}" width="200px" height="200px">
+                    <div class="container">
+                        <p>Some text that describes the assignment.</p>
+                        <p>mike@example.com</p>
+                        <p><button class="button">Grade Received: A+</button></p>         
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <h2 style="text-align: center; padding: 15px;">Upload Assignment</h2>
+                    <img src="{% static 'cfg/images/completed.jpg' %}" width="200px" height="200px">
+                    <div class="container">
+                        <p>Some text that describes the assignment.</p>
+                        <p>mike@example.com</p>
+                        <!-- <p><button class="button">Upload</button></p>          -->
+                        <form action="/postcreate/" method="post">
+                            {% csrf_token %}
+                            <br>
+                            
+                            Document Upload:
+                            <input type="file" name="files[]" id="files">
+                            <input type="hidden" name="url" id="url">
+                            <button type="button" onclick="uploadimage()">Upload</button><br><br>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+   
+</body>
+</html>

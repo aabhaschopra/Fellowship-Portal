@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Details</title>
+    <link rel="stylesheet" href="{% static 'cfg/mentordetailsstyle.css' %}">
+</head>
+<body>
+    <div class="about-section">
+        <h1>About Your Mentor</h1>
+        <p>Know details about your mentor below and contact them!!</p>
+    </div>
+    {% for i in users %}
+    <h2 style="text-align:center">Mentor</h2>
+    <div class="mentor_c">
+        <div class="column">
+          <div class="card">
+            <img src="{% static 'cfg/images/mentor.jpg'%}" alt="Mike" style="width:100%">
+            <div class="container">
+              <h2 class="name">{{i}}</h2>
+              <p class="title">Mentor - The Laali Project</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>mentor@laali.com</p>
+              <p><button class="button" onclick="location.href='mailto:mike@example.com';">Contact</button></p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>

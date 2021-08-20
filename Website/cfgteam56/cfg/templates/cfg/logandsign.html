@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team 56</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Website/cfgteam56/cfg/static/cfg/loginpagestyle.css">
+</head>
+<body>
+  <div class="contact-wrapper">
+    <div class="left_side">
+      <label id="dashboard" onClick="gotodash()">Dashboard</label>
+      <img src="">
+    </div>
+    <div class="right_side">
+      <h2 id="account-header">Account Login</h2>
+      
+      <form id="login-form">
+        <div class="form-row login">
+          <input type="text" required>
+          <span>Email</span>
+        </div>
+        <div class="form-row login">
+          <input type="password" required>
+          <span>Password</span>
+        </div>
+        <div class="form-row login"> 
+          <button type="submit">Login to your Account</button>
+        </div>
+      </form>
+
+      <form id="signup-form">
+        <div class="form-row signup" style="display: none;">
+            <input type="text" required>
+            <span>Full Name</span>
+        </div>
+        <div class="form-row signup" style="display: none;">
+            <input type="number" required>
+            <span>Phone Number</span>
+        </div>
+        <div class="form-row signup" style="display: none;">
+          <input type="text" required>
+          <span>Email</span>
+        </div>
+        <div class="form-row signup" style="display: none;">
+          <input type="password" required>
+          <span>Password</span>
+        </div>
+        <div class="form-row signup" style="display: none;">
+            <input type="password" required>
+            <span>Confirm Password</span>
+        </div>
+        <div class="form-row signup" style="display: none;"> 
+            <button type="submit">Sign-Up</button>
+        </div>
+      </form>
+
+      <div class="socials-wrapper login">
+        <h2>Login with your Social Account</h2>
+        <ul>
+          <li><a href="#" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" class="youtube"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+      <label id="toggle-button" onClick="toggle()">New? Sign-Up instead.</label>
+    </div>
+  </div>
+  <script src="loginpagejs.js"></script>
+</body>
+</html>

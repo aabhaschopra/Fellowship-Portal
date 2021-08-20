@@ -1,0 +1,277 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Laali Project</title>
+
+    <!-- Bootstrap.css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- External CSS File -->
+
+    <link rel="stylesheet" href="{% static 'cfg/indexstyle.css' %}">
+
+    <!-- JS required for Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- FONT AWESOME -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- FONTS MONTSERRAT AND UBUNTU -->
+
+    <link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}">
+    <link href="{% static 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;900&family=Ubuntu:wght@300&display=swap' %}" rel="stylesheet">
+    <link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}">
+    <link href="{% static 'https://fonts.googleapis.com/css2?family=Ubuntu&display=swap' %}" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+
+    <style>
+        .google-translate {
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 15px;
+        }
+        
+        .goog-logo-link {
+            display: none !important;
+        }
+        
+        .goog-te-gadget {
+            color: transparent !important;
+        }
+        
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+        
+        body {
+            top: 0px !important;
+        }
+        
+    </style>
+    
+    <section class="colored-section" id="title">
+        <div class="container-fluid">
+            <!-- Nav Bar -->
+
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="">THE LAALI PROJECT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+                <div class="collapse navbar-collapse " id="navbarScroll">
+
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cta">Download</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login">Login</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Contact Us</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="#">Translate Site</a>
+                            <div id="google_translate_element"></div>
+                        </li>
+                                
+                            <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({pageLanguage: '', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+                            }
+                            </script>
+                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+                    </ul>
+                </div>
+            </nav>
+
+
+            <!-- Title -->
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="big-heading"><em>Self-aware leaders who sensitise and raise awareness around issues of Menstrual health.</em></h1>
+                    <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+                </div>
+                <div class="col-lg-6">
+                    <img class="title-image" src="{% static 'cfg/images/Laali_logo.jpg' %}"  alt="The_Laali_Project_Logo">
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Features -->
+
+    <section class="white-section" id="features">
+        <div class="container-fluid">
+            <h1>About Us</h1>
+            <div class="row">
+                <div class="feature-box col-lg-4">
+                    <i class="icon fas fa-bullseye fa-4x"></i>
+                    <h3 class="feature-title">Aim</h3>
+                    <p>The Laali Project aims to unravel the potential of young teenagers to be change-makers of India’s future.</p>
+                </div>
+                <div class="feature-box col-lg-4">
+                    <i class="icon fas fa-check-circle fa-4x"></i>
+                    <h3 class="feature-title">Plan</h3>
+                    <p>We plan to reinvent their skills through diverse programs focusing on gender sensitization, social and emotional learning, menstrual health & hygiene and entrepreneurial skills.</p>
+                </div>
+                <div class="feature-box col-lg-4">
+                    <i class="icon fas fa-heart fa-4x "></i>
+                    <h3 class="feature-title">Our Work</h3>
+                    <p>During this pandemic, the project aims to reinvent their skills through diverse programs focusing on gender sensitization, 
+                        social and emotional learning, menstrual health & hygiene and entrepreneurial skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials -->
+
+    <section class="colored-section" id="testimonials">
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+                <h1 style="margin-top: 140px;">Our Guest Speakers!!</h1>
+                <div class="carousel-item active container-fluid">
+                    <img class="testimonials-image" src="{% static 'cfg/images/1.jpg' %}" alt="dog-profile">
+                </div>
+                <div class="carousel-item container-fluid">
+                    <img class="testimonials-image" src="{% static 'cfg/images/3.jpg' %}" alt="lady-profile">
+                </div>
+                <div class="carousel-item container-fluid">
+                    <img class="testimonials-image" src="{% static 'cfg/images/4.jpg' %}" alt="lady-profile">
+                </div>
+                <div class="carousel-item container-fluid">
+                    <img class="testimonials-image" src="{% static 'cfg/images/5.jpg' %}" alt="lady-profile">
+                </div>
+                <div class="carousel-item container-fluid">
+                    <img class="testimonials-image" src="{% static 'cfg/images/6.jpg' %}" alt="lady-profile">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" ></span>
+    
+      </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+        </div>
+
+
+    </section>
+
+    <!-- Pricing -->
+
+    <section class="white-section" id="pricing">
+        <h2 class="section-heading">Laali Fellowship Programs</h2>
+        <p>Workshops provided by expert organizations and individuals globally.</p>
+
+        <div class="row">
+            <div class="pricing-coloumn col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Menstrual Health Management Training</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-coloumn col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Gender Sensitization and Sex Education</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-coloumn col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Social-Emotional Learning</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-coloumn col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Entrepreneurial Workshops</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="login"><button type="button" class="btn btn-danger btn-lg download-button" style="text-align: center; width: 200px; border-radius: 50px;">Enroll Now</button></a>
+
+    </section>
+
+
+    <!-- Call to Action -->
+
+    <section class="colored-section" id="cta">
+        <div class="container-fluid">
+            <h3 class="section-heading">Download our app on PlayStore.</h3>
+            <button type="button" class="btn btn-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer class="white-section" id="footer" >
+        <div style="display:flex;align-items: center;flex-direction:column">
+        <h2 class="section-heading" style="margin: 20px;">Contact Us</h2>
+        <form class="container-fluid" >
+            <div class="form-row">
+                <!-- <div class="input-group"> -->
+                    <div class="col-lg-6">
+                        <label for="validationDefault01"></label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="Full Name">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="validationDefaultUsername"></label>
+                        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="email" aria-describedby="inputGroupPrepend2" required>
+                    </div>
+                <!-- </div> -->
+            </div>
+            <div class="form-row">
+              <div class="col-md-3 mb-3">
+                <label for="validationDefault05"></label>
+                <textarea class="form-control" id="validationDefault05" placeholder="Queries | Feedback"></textarea>
+              </div>
+            </div>
+            <div class="form-row">
+                <button class="btn btn-danger btn-lg download-button" type="submit" style="text-align: center; width: 200px; border-radius: 50px;">Submit form</button>
+            </div>
+        </form>
+        <div class="container-fluid">
+            <i class="social-media fab fa-twitter"></i>
+            <i class="social-media fab fa-facebook-f"></i>
+            <i class="social-media fab fa-instagram"></i>
+            <i class="social-media fab fa-linkedin"></i>
+            <p>© Copyright CFG Team 56 2021!</p>
+        </div>
+    </div>
+    </footer>
+
+
+</body>
+
+</html>

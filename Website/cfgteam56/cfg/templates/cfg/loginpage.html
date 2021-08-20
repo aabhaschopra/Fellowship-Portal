@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Team 56</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'cfg/loginpagestyle.css' %}">
+
+    <!-- FONT AWESOME -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+</head>
+<body>
+  <div class="contact-wrapper">
+    <div class="left_side">
+      <img src="{% static 'cfg/images/Laali_logo.jpg' %}" width="80%">
+    </div>
+    <div class="right_side">
+      <h2 id="account-header">Account Login</h2>
+      
+      <form id="login-form" action="/login" method="post">
+      {% csrf_token %}
+        <div class="form-row login">
+          <input id="email" name="email" type="email" required>
+          <span>Email</span>
+        </div>
+        <div class="form-row login">
+          <input id="password" name="password" type="password" required>
+          <span>Password</span>
+        </div>
+        <div class="form-row login"> 
+          <button type="submit">Login to your Account</button>
+        </div>
+      </form>
+
+      <!-- <form id="signup-form">
+        <div class="form-row signup" style="display: none;">
+            <input type="text" required>
+            <span>Full Name</span>
+        </div>
+        <div class="form-row signup" style="display: none;">
+            <input type="number" required>
+            <span>Phone Number</span>
+        </div>
+        <div class="form-row signup" style="display: none;">
+          <input type="text" required>
+          <span>Email</span>
+        </div>
+        <div class="form-row signup" style="display: none;">
+          <input type="password" required>
+          <span>Password</span>
+        </div>
+        <div class="form-row signup" style="display: none;">
+            <input type="password" required>
+            <span>Confirm Password</span>
+        </div>
+        <div class="form-row signup" style="display: none;"> 
+            <button type="submit">Sign-Up</button>
+        </div>
+      </form> -->
+
+      <div class="socials-wrapper login">
+        <h2>Login with your Social Account instead</h2>
+        <ul>
+          <li><a href="#" class="facebook"><i class="fab fa-google"></i></a></li>
+        </ul>
+      </div>
+      <!-- <label id="toggle-button" onClick="toggle()">New? Sign-Up instead.</label> -->
+    </div>
+  </div>
+  <script src="{% static 'cfg/loginpagejs.js' %}"></script>
+</body>
+</html>

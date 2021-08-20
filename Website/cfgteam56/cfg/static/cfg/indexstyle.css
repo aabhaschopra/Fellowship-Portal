@@ -1,0 +1,201 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+/* h2{
+    /* font-family: 'Montserrat', sans-serif;
+    font-weight: 700; 
+    font-size: 2.5rem;
+    line-height: 1.5;
+} */
+
+h3{
+    /* font-family: 'Montserrat', sans-serif;
+    font-weight: 700; */
+    font-size: 1.2rem;
+}
+
+p{
+    color: #8f8f8f;
+}
+
+.big-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.section-heading{
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.container-fluid{
+    padding: 7% 12%;
+}
+
+.colored-section{
+    background-color: #ff4c68;
+    color: white;
+}
+.white-section{
+    background-color:white;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar{
+    padding-bottom: 4.5rem;
+}
+
+.navbar-brand{
+    
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size:2.5rem;
+    /* size: 2rem; */
+}
+.nav-item{
+    padding: 0 12px;
+}
+.nav-link{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+/*DOWNLOAD BUTTONS */
+
+.download-button{
+    margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+
+/*
+here we are specifying changes to a class
+only particular to the iid mentioned 
+ */
+
+#title .container-fluid{
+    padding: 3% 12% 7%;
+    text-align: left;
+}
+
+/* TITLE(iPHONE) IMAGE */
+.title-image{
+    /* padding-top: 7%; */
+    width: 60%;
+    /* transform: rotate(25deg); */
+    /* position: absolute; */
+    right: 25%;
+    margin-left: 20%;
+}
+
+/* Features  */
+
+#features{
+    position: relative;
+    z-index: 1;
+}
+
+.feature-title{
+    font-size: 1.2rem;
+}
+.feature-box{
+    padding: 5%;
+}
+
+.icon{
+    color: #ef8172;
+    margin-bottom: 1rem;
+}
+.icon:hover{
+    color: #ff4c68;
+}
+
+
+/* TESTIMONIALS */
+
+#testimonials{
+    background-color: #ef8172;
+}
+
+
+
+.testimonials-image{
+    width: 50%;
+    /* border-radius: 100%; */
+    margin: 20px;
+}
+
+.testimonial-text{
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+
+/* PRESS */
+#press{
+    background-color: #ef8172;
+    padding-bottom: 3%;
+}
+
+.press-logos{
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+/* PRICING */
+
+#pricing
+{
+    padding:100px;
+}
+
+.price-text{
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+
+.pricing-coloumn{
+    padding:3% 2%;
+    
+}
+
+
+/* Call to Action */
+
+
+
+/* Footer */
+
+.social-media{
+    margin: 20px 10px;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width:990px)
+{
+    #title{
+        text-align: center;
+    }
+    .title-image{
+        width: 40%;
+        transform: rotate(0); 
+        position: static;
+    }
+}
+
+.card{
+    border-radius: 20px;
+    height:100%;
+}
