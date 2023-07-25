@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import pyrebase
+from pyrebase import pyrebase
 from django.contrib import messages
 # Create your views here.
 
